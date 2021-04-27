@@ -20,5 +20,8 @@ RUN cd /vue-msf/rabbitmq \
     && cp -i rabbitmq-server /usr/lib/rabbitmq/lib/rabbitmq_server-3.8.12/sbin
 
 
+RUN /usr/sbin/rabbitmq-plugins enable rabbitmq_management 
+    #&& /usr/sbin/rabbitmqctl add_user super super \
+    #&& /usr/sbin/rabbitmqctl set_user_tags  super administrator 
 
 #ENTRYPOINT ["./dolphindb"]
